@@ -11,20 +11,33 @@ class UserBroomingController extends Controller
 {
     // عرض صفحة إنشاء الحجز
     public function create()
-{
-    // التحقق مما إذا كان المستخدم مسجل الدخول
-    if (!auth()->check()) {
-        // تحويل المستخدم إلى صفحة تسجيل الدخول مع رسالة
-        return redirect()->route('login')->with('error', 'You have to login first');
+    {
+        if (!auth()->check()) {
+            return redirect()->route('login')->with('error', 'You have to login first');
+        }
+
+        $pets = Pet::where('user_id', auth()->id())->get();
+        $services = BroomingService::all();
+
+        // جلب جميع المواعيد المحجوزة بدون تحديد التاريخ
+        $bookedAppointments = Brooming::pluck('appointment_time')->toArray();
+
+        return view('grooming.createBrooming', compact('pets', 'services', 'bookedAppointments'));
     }
+    public function getBookedAppointments(Request $request)
+{
+    $date = $request->query('date');
+    $bookedAppointments = Brooming::whereDate('appointment_date', $date)
+        ->pluck('appointment_time')
+        ->toArray();
 
-    // جلب الحيوانات الخاصة بالمستخدم الحالي والخدمات المتاحة
-    $pets = Pet::where('user_id', auth()->id())->get();
-    $services = BroomingService::all();
-
-    // تمرير البيانات إلى صفحة إنشاء الحجز
-    return view('grooming.createBrooming', compact('pets', 'services'));
+    return response()->json(['bookedAppointments' => $bookedAppointments]);
 }
+
+
+
+
+
 
     public function show($petId)
     {

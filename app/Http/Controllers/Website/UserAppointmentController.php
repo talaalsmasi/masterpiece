@@ -95,15 +95,15 @@ class UserAppointmentController extends Controller
 
 public function getBookedTimes(Request $request)
 {
-    $appointmentDate = $request->input('appointment_date');
-    $doctorId = $request->input('doctor_id');
+    $date = $request->query('date');
+    $doctorId = $request->query('doctor_id');
 
-    $bookedTimes = Appointment::where('appointment_date', $appointmentDate)
+    $bookedTimes = Appointment::where('appointment_date', $date)
                     ->where('doctor_id', $doctorId)
                     ->pluck('appointment_time')
                     ->toArray();
 
-    return response()->json($bookedTimes);
+    return response()->json(['bookedTimes' => $bookedTimes]);
 }
 
 

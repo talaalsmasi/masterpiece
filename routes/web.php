@@ -172,7 +172,6 @@ Route::post('/appointment/payment', [AppointmentPaymentController::class, 'showP
 Route::post('/appointment/payment/process', [AppointmentPaymentController::class, 'processPayment'])->name('appointment.payment.process');
 Route::get('/appointment/{id}', [UserAppointmentController::class, 'show'])->name('appointment.show');
 Route::get('/get-booked-times', [UserAppointmentController::class, 'getBookedTimes']);
-Route::get('/appointments/get-booked-times', [AppointmentController::class, 'getBookedTimes'])->name('appointments.getBookedTimes');
 
 
 
@@ -232,6 +231,9 @@ Route::post('/brooming/payment', [BroomingPaymentController::class, 'showPayment
 Route::post('/brooming/payment/process', [BroomingPaymentController::class, 'processPayment'])->name('brooming.payment.process');
 
 Route::get('/brooming/{id}', [UserBroomingController::class, 'show'])->name('brooming.show');
+
+Route::get('/get-booked-appointments', [UserBroomingController::class, 'getBookedAppointments']);
+
 
 
 

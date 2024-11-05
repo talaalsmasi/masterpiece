@@ -1,0 +1,263 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #F5F0E6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container-fluid {
+    padding: 20px;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #E17E2A;
+    color: #fff;
+    padding: 15px;
+}
+
+.navbar-brand {
+    color: #fff;
+    font-size: 24px;
+}
+
+.nav-link {
+    font-size: 18px;
+    margin-left: 15px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: capitalize;
+
+}
+
+/* Sidebar Styles */
+.sidebar {
+    background-color: #E17E2A;
+    color: #fff;
+    padding: 15px;
+    height: 200vh;
+    position: fixed;
+    width: 200px;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    overflow: scroll;
+}
+
+.sidebar h2 {
+    color: #fff;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 15px;
+}
+
+.sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar ul li a i {
+    margin-right: 10px;
+}
+
+.sidebar ul li a:hover {
+    text-decoration: none;
+
+}
+
+/* Content Area Styles */
+.col-md-10 {
+    margin-left: 220px;
+    padding: 20px;
+}
+
+/* Card Styles */
+.card {
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+    color: #fff;
+    background-color: #F5F0E6;
+    border: none;
+}
+
+.card.bg-primary {
+    background-color: #E17E2A;
+}
+
+.card.bg-warning {
+    background-color: #FFA500;
+}
+
+.card.bg-success {
+    background-color: #28A745;
+}
+
+.card.bg-danger {
+    background-color: #DC3545;
+}
+
+.card-body {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: black;
+}
+.card-title{
+    text-transform: capitalize;
+    font-size: 40px;
+}
+
+.card-footer {
+    font-size: 1.25rem;
+}
+
+/* Chart Styles */
+canvas {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.row .col-lg-8,
+.row .col-lg-4 {
+    margin-bottom: 20px;
+}
+
+/* Utility Styles */
+.text-white {
+    color: #fff;
+}
+
+.bg-primary {
+    background-color: #E17E2A !important;
+}
+
+.bg-warning {
+    background-color: #FFA500 !important;
+}
+
+.bg-success {
+    background-color: #28A745 !important;
+}
+
+.bg-danger {
+    background-color: #DC3545 !important;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #E17E2A;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+.stat-card {
+    background-color: #FFF; /* White background for contrast */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 20px; /* Padding inside the card */
+    margin-bottom: 20px; /* Space between cards */
+    text-align: center; /* Center the text */
+}
+
+.stat-card h6 {
+    font-size: 1.2rem; /* Increase font size */
+    font-weight: bold; /* Make the font bold */
+    color: #E17E2A; /* Use the orange color */
+    margin-bottom: 10px; /* Space between title and content */
+}
+
+.stat-card p {
+    font-size: 2rem; /* Larger font for the numbers */
+    color: #333; /* Dark color for contrast */
+}
+.sidebar {
+    width: 210px; /* Increase this value to make the sidebar wider */
+    background-color: #E17E2A; /* Keep the background color consistent */
+    height: 100vh; /* Full height */
+    position: fixed; /* Stay fixed to the left */
+    top: 0;
+    left: 0;
+    padding-top: 20px; /* Padding at the top */
+}
+
+/* Adjust the main content area */
+.main-content {
+    margin-left: 250px; /* This should match the sidebar width */
+    padding: 10px;
+}
+.sidebar ul.nav-links li {
+    padding: 10px 5px; /* Increase the padding */
+    font-size: 16px; /* Optionally, increase the font size for better readability */
+    line-height: 1; /* Increase line height to add more space between lines */
+}
+
+/* Adjust the sidebar overall appearance if needed */
+.sidebar {
+    width: 220px; /* Adjust the width if necessary */
+    background-color: #E17E2A; /* Consistent background color */
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top:10px;
+}
+
+/* Adjust the spacing for the icons and text */
+.sidebar ul.nav-links li a {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between the icon and the text */
+    color: #ffffff; /* Text color */
+    text-decoration: none;
+}
+.sidebar ul.nav-links li:hover,
+.sidebar ul.nav-links li.active {
+    background-color: #c9651d; /* Change the background color on hover */
+    padding: 8px 3px; /* Increase the padding to make the hover area taller */
+    border-radius: 5px; /* Optional: Add rounded corners */
+}
+
+/* Adjust the sidebar overall appearance if needed */
+.sidebar ul.nav-links li a {
+    display: flex;
+    font-size: 20px;
+    align-items: center;
+    gap: 8px; /* Space between the icon and the text */
+    color: #ffffff; /* Text color */
+    text-decoration: none;
+    padding: 0; /* Ensure padding is consistent with hover */
+}
+.btn btn-info btn-sm{
+    background-color:  #c9651d;
+}
+.alert.alert-danger {
+    background-color: #f8d7da; /* لون الخلفية */
+    border-color: #e17e2a; /* لون الحدود */
+    color: #e17e2a; /* لون النص */
+}
